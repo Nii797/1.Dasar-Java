@@ -12,21 +12,24 @@ public class Person3 {
     private double weight;
     private double height;
     private String hobi;
+    private String profesi;
 
     // construct atau constructor
-    Person3(String firstName, String lastName, int age, double weight, double height, String hobi) {
+    Person3(String firstName, String lastName, int age, double weight, double height, String hobi, String profesi) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.weight = weight;
         this.height = height;
         this.hobi = hobi;
+        this.profesi = profesi;
         // menambahkan satu persatu atau sama dengan 1 + 1
         Person3.Count++;
     }
 
-    Person3(String firstName, String middleName, String lastName, int age, double weight, double height, String hobi) {
-        this(firstName, lastName, age, weight, height, hobi);
+    Person3(String firstName, String middleName, String lastName, int age, double weight, double height, String hobi,
+            String profesi) {
+        this(firstName, lastName, age, weight, height, hobi, profesi);
         this.middleName = middleName;
     }
 
@@ -38,8 +41,28 @@ public class Person3 {
         }
     }
 
+    // GETTER
     public String getMiddleName() {
         return this.middleName;
+    }
+
+    // GETTER PROFESI
+    public String getProfesi() {
+        return this.profesi;
+    }
+
+    // SETTER
+    public String setMiddleName(String middleName) {
+        return this.middleName = middleName;
+    }
+
+    // SETTER PROFESI
+    // public String setProfesi(String profesi) {
+    // return this.profesi = profesi;
+    // }
+    // versi 2
+    public void setProfesi(String profesi) {
+        this.profesi = profesi;
     }
 
     public void printData() {
@@ -60,6 +83,7 @@ public class Person3 {
         System.out.println("TInggi Saya " + this.height + ".");
         System.out.println("Berat Saya " + this.weight + ".");
         System.out.println("Hobi Saya " + this.hobi + ".");
+        System.out.println("Profesi saya adalah " + this.profesi + ".");
         System.out.println("===================================================");
         System.out.println("");
     }
