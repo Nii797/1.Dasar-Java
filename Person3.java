@@ -1,17 +1,17 @@
 public class Person3 {
 
-    // membuat varaibel Count untuk menghitung jumlah orang
-    // dan hitung dimulai dari nol
-    // private
-    public static int Count = 0;
-    public String firstName;
-    // middle untuk overload constuctor
-    public String middleName;
-    public String lastName;
-    public int age;
-    public double weight;
-    public double height;
-    public String hobi;
+    // new
+    // menyembunyikan informasi
+    // mengubah field-field public dibawah public menjadi private
+    // studi kasus mengambil nama tengah atau middleName
+    private static int Count = 0;
+    private String firstName;
+    private String middleName;
+    private String lastName;
+    private int age;
+    private double weight;
+    private double height;
+    private String hobi;
 
     // construct atau constructor
     Person3(String firstName, String lastName, int age, double weight, double height, String hobi) {
@@ -25,31 +25,11 @@ public class Person3 {
         Person3.Count++;
     }
 
-    // Person3(String firstName, String middleName, String lastName, int age, double
-    // weight, double height, String hobi) {
-    // this.firstName = firstName;
-    // this.lastName = lastName;
-    // this.age = age;
-    // this.weight = weight;
-    // this.height = height;
-    // this.hobi = hobi;
-    // // menambahkan satu persatu atau sama dengan 1 + 1
-    // Person3.Count++;
-    // this.middleName = middleName;
-    // }
-
-    // cara kedua memanggil constructor sebelumnya
     Person3(String firstName, String middleName, String lastName, int age, double weight, double height, String hobi) {
         this(firstName, lastName, age, weight, height, hobi);
         this.middleName = middleName;
     }
 
-    // method fullname
-    // public String fullName() {
-    // return this.firstName + " " + this.lastName;
-    // }
-
-    // method fullname versi 1
     public String fullName() {
         if (this.middleName == null) {
             return this.firstName + " " + this.lastName;
@@ -58,7 +38,10 @@ public class Person3 {
         }
     }
 
-    // method
+    public String getMiddleName() {
+        return this.middleName;
+    }
+
     public void printData() {
 
         System.out.println("");
