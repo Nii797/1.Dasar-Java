@@ -4,12 +4,11 @@ class Sepeda {
 
     private String merek;
     private String warna;
-    private int jarak;
+    private int jarak = 0;
 
-    Sepeda(String merek, String warna, int jarak) {
+    Sepeda(String merek, String warna) {
         this.merek = merek;
         this.warna = warna;
-        this.jarak = jarak;
     }
 
     // GET
