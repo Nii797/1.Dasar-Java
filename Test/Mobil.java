@@ -6,7 +6,6 @@ public class Mobil {
     private int berat;
     private int jarak = 0;
     private int fuel = 100;
-    private int isi = 0;
 
     Mobil(String nama, String warna, int berat) {
         this.nama = nama;
@@ -33,7 +32,7 @@ public class Mobil {
 
         // this.jarak += jarak;
         System.out.println("Jarak : " + this.jarak + " Km.");
-        System.out.println("Bahan Bakar: " + fuel + "L");
+        System.out.println("Bahan Bakar: " + this.fuel + "L");
     }
 
     public void isiBensin(int isi) {
