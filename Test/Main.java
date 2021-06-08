@@ -22,10 +22,19 @@ public class Main {
         Mobil mobil1 = new Mobil("Golf GTI", "Warna", 120);
         System.out.println("[Info Mobil]");
         mobil1.printData();
+
         System.out.println("----------------------------");
+
         System.out.print("Masukan jarak yang akan ditempuh: ");
         int inputmobil1 = scanner.nextInt();
         mobil1.runMobil(inputmobil1);
+
+        System.out.println("----------------------------");
+
+        System.out.print("Masukan jumlah isi ulang bahan bakar: ");
+        int inputbensin = scanner.nextInt();
+        mobil1.isiBensin(inputbensin);
+
     }
 
 }

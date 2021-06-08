@@ -6,6 +6,7 @@ public class Mobil {
     private int berat;
     private int jarak = 0;
     private int fuel = 100;
+    private int isi = 0;
 
     Mobil(String nama, String warna, int berat) {
         this.nama = nama;
@@ -33,6 +34,22 @@ public class Mobil {
         // this.jarak += jarak;
         System.out.println("Jarak : " + this.jarak + " Km.");
         System.out.println("Bahan Bakar: " + fuel + "L");
+    }
+
+    public void isiBensin(int isi) {
+        System.out.println("Menambahkan " + isi + "L");
+
+        if (isi <= 0) {
+            System.out.println("Bahan tidak terisi");
+        } else if (isi + this.fuel >= 100) {
+            System.out.println("Bahan bakar kelebihan");
+            this.fuel = 100;
+        } else {
+            this.fuel += isi;
+        }
+
+        System.out.println("Bahan bakar " + this.fuel + "L");
+
     }
 
 }
