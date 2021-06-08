@@ -19,7 +19,7 @@ public class Main {
 
         // OBJEK MOBIL
         System.out.println("============================");
-        Mobil mobil1 = new Mobil("Golf GTI", "Warna");
+        Mobil mobil1 = new Mobil("Golf GTI", "Warna", 120);
         System.out.println("[Info Mobil]");
         mobil1.printData();
         System.out.println("----------------------------");
