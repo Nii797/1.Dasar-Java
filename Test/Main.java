@@ -8,33 +8,30 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        // OBJEK SEPEDA
-        Sepeda sepeda1 = new Sepeda("Pasific", "Putih");
-        System.out.println("[Info Sepeda]");
-        sepeda1.Dataprint();
-        System.out.println("----------------------------");
-        System.out.print("Masukan jarak yang akan ditempuh: ");
-        int inputsepeda1 = scanner.nextInt();
-        sepeda1.run(inputsepeda1);
+        System.out.println("======= APLIKASI INFORMASI KENDARAAN =======");
+        System.out.println("");
+        // object dan informasi sepedah
+        Sepeda sepeda = new Sepeda();
+        sepeda.setNama("Polygon");
+        sepeda.setWarna("Putih");
+        System.out.println("=*=*=*= INFO SEPEDA =*=*=*=");
+        sepeda.printData();
 
-        // OBJEK MOBIL
-        System.out.println("============================");
-        Mobil mobil1 = new Mobil("Golf GTI", "Warna", 120);
-        System.out.println("[Info Mobil]");
-        mobil1.printData();
+        System.out.println("");
 
-        System.out.println("----------------------------");
-
-        System.out.print("Masukan jarak yang akan ditempuh: ");
-        int inputmobil1 = scanner.nextInt();
-        mobil1.runMobil(inputmobil1);
-
-        System.out.println("----------------------------");
-
-        System.out.print("Masukan jumlah isi ulang bahan bakar: ");
-        int inputbensin = scanner.nextInt();
-        mobil1.isiBensin(inputbensin);
-
+        // object dan informasi mobil
+        Mobil mobil = new Mobil();
+        mobil.setNama("Ferrari");
+        mobil.setWarna("hitam");
+        System.out.println("=*=*=*= INFO MOBIL =*=*=*=");
+        mobil.printData();
+        // input dan input mengisi bahan bakar
+        System.out.println("Bahan Bakar : " + mobil.getFuel() + "L");
+        System.out.println("===========");
+        System.out.print("Masukan jumlah isi ulang bahan bakar : ");
+        int litre = scanner.nextInt();
+        // memanggil method instance 'charge' dan berikan 'litre' sebagai argument
+        mobil.charge(litre);
     }
 
 }
