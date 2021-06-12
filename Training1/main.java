@@ -7,8 +7,11 @@ public class main {
 
         Scanner input = new Scanner(System.in);
 
+        // OBJECT KARAKTER 1
         Karakter karakter1 = new Karakter();
-        karakter1.setNama("Leon");
+        System.out.print("Masukan nama: ");
+        String inputnama = input.nextLine();
+        karakter1.setNama(inputnama);
         karakter1.setTokoh("Protagonis");
         System.out.print("Masukan Health Pont: ");
         int health = input.nextInt();
@@ -17,5 +20,11 @@ public class main {
         karakter1.printData();
         System.out.println("==================");
         karakter1.statusHealth(karakter1.getHealth());
+
+        // OBJECT KERAKTER 2
+        Senjata senjata1 = new Senjata();
+        senjata1.setNama("Handgun");
+        senjata1.printData();
+
     }
 }

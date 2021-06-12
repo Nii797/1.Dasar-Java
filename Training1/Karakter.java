@@ -12,8 +12,10 @@ class Karakter extends Game {
     }
 
     public void statusHealth(int healthy) {
-        if (healthy >= 100) {
+        if (healthy >= 101) {
             System.out.println("Healthy terlalu penuh");
+        } else if (healthy == 100) {
+            System.out.println("Darah penuh");
         } else if (healthy >= 50) {
             System.out.println("Healthy medium");
         } else if (healthy >= 6) {
