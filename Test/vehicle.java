@@ -5,6 +5,12 @@ class Vehicle {
     private String warna;
     private int jarak = 0;
 
+    Vehicle(String nama, String warna, int jarak) {
+        this.nama = nama;
+        this.warna = warna;
+        this.jarak = jarak;
+    }
+
     public String getNama() {
         return this.nama;
     }

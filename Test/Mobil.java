@@ -4,8 +4,20 @@ public class Mobil extends Vehicle {
 
     private int fuel = 0;
 
+    Mobil(String nama, String warna, int jarak) {
+        super(nama, warna, jarak);
+    }
+
     public int getFuel() {
         return this.fuel;
+    }
+
+    // mendefinisikan method jarak 'printData' OVERRIDE
+    public void printData() {
+        System.out.println("Nama  : " + this.getNama() + ".");
+        System.out.println("Warna : " + this.getWarna() + ".");
+        System.out.println("Jarak : " + this.getJarak() + ".");
+        System.out.println("Bahan Bakar : " + this.getJarak() + "L.");
     }
 
     public void charge(int litre) {
