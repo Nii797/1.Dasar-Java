@@ -20,6 +20,16 @@ public class Mobil extends Vehicle {
         System.out.println("Bahan Bakar : " + this.getJarak() + "L.");
     }
 
+    public void run(int jarak) {
+        System.out.println("Bergerak " + jarak + "Km ...");
+        if (jarak <= this.fuel) {
+            this.jarak += jarak;
+            this.fuel -= jarak;
+        } else {
+            System.out.println("Bahan bakar tidak cukup");
+        }
+    }
+
     public void charge(int litre) {
         System.out.println("Menambahkan " + litre + "Liter ...");
 

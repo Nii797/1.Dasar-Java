@@ -15,12 +15,21 @@ public class Main {
         System.out.println("=*=*=*= INFO SEPEDA =*=*=*=");
         sepeda.printData();
 
-        System.out.println("");
+        System.out.println("===========");
+        System.out.println("Masukan jarak yang ditempuh : ");
+        int jaraksepeda = scanner.nextInt();
+        sepeda.run(jaraksepeda);
 
         // object dan informasi mobil
         Mobil mobil = new Mobil("Ferrari", "Hitam", 120);
         System.out.println("=*=*=*= INFO MOBIL =*=*=*=");
         mobil.printData();
+
+        // jarak yang ditempuh mobil
+        System.out.println("===========");
+        System.out.print("Masukan jarak yang ditempuh : ");
+        int jarakmobil = scanner.nextInt();
+        mobil.run(jarakmobil);
 
         // input dan input mengisi bahan bakar
         // System.out.println("Bahan Bakar : " + mobil.getFuel() + "L");

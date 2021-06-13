@@ -3,7 +3,9 @@ package Test;
 class Vehicle {
     private String nama;
     private String warna;
-    private int jarak = 0;
+    // private int jarak = 0;
+    // ubah privatet jarak menjadi protected
+    protected int jarak = 0;
 
     Vehicle(String nama, String warna, int jarak) {
         this.nama = nama;
